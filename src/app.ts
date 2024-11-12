@@ -8,12 +8,20 @@ import { conectToMongo } from "./config/db"
 import cors from "cors"
 import http from 'http'
 import {Server} from 'socket.io'
+import { handleSocketIo } from "./sokets/io"
 
 const port = process.env.PORT || 11223
 const app = express()
 
 const httpServer = http.createServer(app)
-const io = new Server(httpServer)
+export const io = new Server(httpServer ,{
+    cors: {
+        origin :'*',
+        methods :'*'
+    }
+})
+
+io.on('connection' ,handleSocketIo)
 
 conectToMongo()
 
