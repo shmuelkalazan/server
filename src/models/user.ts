@@ -1,5 +1,4 @@
 import { model, Schema ,Types} from "mongoose"
-import { boolean, string } from "zod"
 
 export interface Iuser extends Document{
     username:string

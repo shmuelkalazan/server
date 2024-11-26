@@ -1,5 +1,4 @@
 import { model, Schema ,Types} from "mongoose"
-import { boolean, string } from "zod"
 import { Iuser } from "./user"
 
 export interface Icandidate extends Document{
