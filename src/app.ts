@@ -18,7 +18,7 @@ dotenv.config({
 
 const router = Router()
 
-const port = process.env.PORT || 80
+const port = process.env.PORT || 8000
 export const app = express()
 
 const httpServer = http.createServer(app)
