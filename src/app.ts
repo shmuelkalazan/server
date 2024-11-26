@@ -44,7 +44,7 @@ app.use("/" ,router.get("/ping",(req:Request , res:Response)=>{
 }))
 
 
-// httpServer.listen(port , ()=> {
-//     console.log("server run on port " +port)
-// })
+httpServer.listen(port , ()=> {
+    console.log("server run on port " +port)
+})
 
